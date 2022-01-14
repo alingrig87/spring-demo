@@ -26,5 +26,4 @@ public class Product {
         this.description = description;
         this.imageURL = imageURL;
     }
-
 }
