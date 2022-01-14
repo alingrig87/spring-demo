@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-// Product and his primarty key the Id which is Long
+// Product and his primary key the Id which is Long
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
 

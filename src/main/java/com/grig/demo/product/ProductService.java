@@ -29,4 +29,12 @@ public class ProductService {
         }
         productRepository.save(product);
     }
+
+    public void deleteStudent(Long productId) {
+        boolean isProductInDB = productRepository.existsById(productId);
+        if(!isProductInDB) {
+            throw new IllegalStateException("Student with id " + productId + " does not exist");
+        }
+        productRepository.deleteById(productId);
+    }
 }

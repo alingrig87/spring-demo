@@ -3,6 +3,7 @@ package com.grig.demo.product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.ServerEndpoint;
 import java.util.List;
 
 @RestController
@@ -23,5 +24,10 @@ public class ProductController {
     @PostMapping
     public void addProduct(@RequestBody Product product) {
         productService.addProduct(product);
+    }
+
+    @DeleteMapping(path = "{studentId}")
+    public void deleteProduct(@PathVariable("studentId") Long studentId) {
+        productService.deleteStudent(studentId);
     }
 }
